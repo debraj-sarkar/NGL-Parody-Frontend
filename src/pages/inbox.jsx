@@ -6,6 +6,7 @@ import { getMessages } from "../api/inboxApi";
 import { toast, ToastContainer } from "react-toastify";
 import SideBar from "../components/SideBar";
 import { data } from "react-router-dom";
+import { BASE_URL } from "../api/config";
 
 const Inbox = () => {
   const [username, setUsername] = useState("");
@@ -32,7 +33,7 @@ const Inbox = () => {
 
   // build user share link
   const linkId = localStorage.getItem("linkId");
-  const userLink = `http://localhost:5173/send/${linkId}`;
+  const userLink = `${BASE_URL}send/${linkId}`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(userLink);
