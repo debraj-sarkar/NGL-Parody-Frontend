@@ -33,7 +33,7 @@ const Inbox = () => {
 
   // build user share link
   const linkId = localStorage.getItem("linkId");
-  const userLink = `${BASE_URL}send/${linkId}`;
+  const userLink = `${BASE_URL}/send/${linkId}`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(userLink);
