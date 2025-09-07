@@ -2,7 +2,7 @@ import React from "react";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Inbox from "./pages/inbox";
-import Message from "./pages/message";
+import Message from "./pages/Message";
 import Index from "./pages/Index";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
