@@ -36,8 +36,6 @@ const Login = () => {
       localStorage.setItem("token", data.token);
       localStorage.setItem("linkId", data.linkId);
 
-      console.log(data);
-
       toast.success("Logged in successfully!");
       navigate("/inbox", { replace: true });
       setFormData({ email: "", password: "" });

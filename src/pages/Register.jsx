@@ -27,7 +27,6 @@ const Register = () => {
     };
     try {
       const data = await registerUser(trimmedData);
-      console.log("from Frontend", data);
       localStorage.setItem("token", data.token);
       localStorage.setItem("linkId", data.linkId);
       toast.success("Account created successfully!");
