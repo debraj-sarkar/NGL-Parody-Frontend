@@ -51,7 +51,7 @@ const Register = () => {
           <div className="flex flex-col pt-4">
             <div className="mb-4 flex flex-col">
               {/* username */}
-              <label className="text-gray-200 font-semibold text-base">
+              <label className="text-gray-200 font-semibold text-base mb-1">
                 Username
               </label>
               <input
@@ -60,13 +60,13 @@ const Register = () => {
                 value={formData.username}
                 onChange={handleChange}
                 placeholder="Choose a username"
-                className="w-full bg-transparent py-2 text-base border-b border-gray-600 rounded-sm focus:outline-none"
+                className="w-full bg-transparent py-2 text-base border border-gray-800 rounded-md text-white px-2 focus:outline-none"
               />
             </div>
 
             <div className="mb-4 flex flex-col">
               {/* email */}
-              <label className="text-gray-200 font-semibold text-base">
+              <label className="text-gray-200 font-semibold text-base mb-1">
                 Email
               </label>
               <input
@@ -75,13 +75,13 @@ const Register = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Enter your email"
-                className="w-full bg-transparent py-2 text-base border-b border-gray-600 rounded-sm focus:outline-none"
+                className="w-full bg-transparent py-2 text-base border border-gray-800 rounded-md text-white px-2 focus:outline-none"
               />
             </div>
 
             <div className="mb-6 flex flex-col">
               {/* password */}
-              <label className="text-gray-200 font-semibold text-base">
+              <label className="text-gray-200 font-semibold text-base mb-1">
                 Password
               </label>
               <input
@@ -90,7 +90,7 @@ const Register = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Create a password"
-                className="w-full bg-transparent py-2 text-base border-b border-gray-600 rounded-sm focus:outline-none"
+                className="w-full bg-transparent py-2 text-base border border-gray-800 rounded-md text-white px-2 focus:outline-none"
               />
             </div>
           </div>

@@ -56,7 +56,7 @@ const Login = () => {
           <div className="flex flex-col pt-4">
             <div className="mb-4 flex flex-col">
               {/* email */}
-              <label className="text-gray-200 font-semibold text-lg">
+              <label className="text-gray-200 font-semibold text-lg mb-1">
                 Email
               </label>
               <input
@@ -65,13 +65,13 @@ const Login = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full bg-transparent py-2 text-base border-b border-gray-600 rounded-sm focus:outline-none"
+                className="w-full bg-transparent py-2 text-base border border-gray-800 rounded-md text-white px-2 focus:outline-none"
               />
             </div>
 
             <div className="flex flex-col mb-6">
               {/* password */}
-              <label className="text-gray-200 font-semibold text-lg">
+              <label className="text-gray-200 font-semibold text-lg mb-1">
                 Password
               </label>
               <input
@@ -80,7 +80,7 @@ const Login = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Password"
-                className="w-full bg-transparent py-2 text-base border-b border-gray-600 rounded-sm focus:outline-none"
+                className="w-full bg-transparent py-2 text-base border border-gray-800 rounded-md text-white px-2 focus:outline-none"
               />
             </div>
           </div>
@@ -92,7 +92,7 @@ const Login = () => {
           </Button>
         </form>
         <div className="flex justify-center border-t pt-4 rounded-sm border-gray-600">
-          <p className="text-sm">
+          <p className="text-sm text-gray-400">
             Don't have an account?{" "}
             <Link
               to="/register"
