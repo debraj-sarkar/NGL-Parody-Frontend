@@ -36,7 +36,7 @@ const Message = () => {
         {/* textarea */}
         <div className="w-full rounded-lg">
           <textarea
-            className="w-full border border-gray-400 bg-transparent rounded-lg px-3 py-2 resize-none focus:outline-none"
+            className="w-full border text-white border-gray-400 bg-transparent rounded-lg px-3 py-2 resize-none focus:outline-none"
             rows={5}
             placeholder="Type your message here..."
             value={message}
