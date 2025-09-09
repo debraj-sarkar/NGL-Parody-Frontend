@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { sendMessage } from "../api/sendMessageApi";
 
 const Message = () => {
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const { linkId } = useParams();
 
@@ -15,12 +16,17 @@ const Message = () => {
       return;
     }
 
+    if (loading) return;
+
     try {
+      setLoading(true);
       await sendMessage(message, linkId);
       toast.success("Message sent successfully!");
       setMessage("");
     } catch (error) {
       toast.error("Failed to send message!");
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -44,8 +50,14 @@ const Message = () => {
           ></textarea>
         </div>
         {/* button */}
-        <Button className={"mt-4 w-full"} onClick={handleSend}>
-          <p className="text-center font-bold text-xl">Send</p>
+        <Button
+          className={"mt-4 w-full"}
+          onClick={handleSend}
+          disabled={loading}
+        >
+          <p className="text-center font-bold text-xl">
+            {loading ? "sending..." : "Send"}
+          </p>
         </Button>
 
         <ToastContainer position="top-right" autoClose={2000} />
